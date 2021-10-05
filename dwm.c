@@ -1574,7 +1574,7 @@ runAutostart(void) {
     system("killall -q dwmblocks; dwmblocks &");
     system("killall -q nm-applet; nm-applet &");
     system("killall -q compton; compton --config ~/.config/compton.conf &");
-    system("killall -q xautolock; xautolock -time 5 -locker slock &");
+    system("killall -q xautolock; xautolock -time 5 -corners 00-- -locker slock &");
     system("killall -q redshift; redshift -P -O 3500 &");
 }
 
