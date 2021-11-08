@@ -1243,6 +1243,8 @@ manage(Window w, XWindowAttributes *wa)
 	updatewindowtype(c);
 	updatesizehints(c);
 	updatewmhints(c);
+	c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
+	c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
 	XSelectInput(dpy, w, EnterWindowMask|FocusChangeMask|PropertyChangeMask|StructureNotifyMask);
 	grabbuttons(c, 0);
 	if (!c->isfloating)
@@ -1625,6 +1627,7 @@ runAutostart(void) {
     system("killall -q compton; compton --config ~/.config/compton.conf &");
     system("killall -q xautolock; xautolock -time 5 -corners 00-- -locker slock &");
     system("killall -q redshift; redshift -P -O 3500 &");
+    system("killall -q dunst; dunst &");
 }
 
 void
