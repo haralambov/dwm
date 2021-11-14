@@ -76,6 +76,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *languagecmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/language.sh", NULL };
 static const char *brupcmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/brightness.sh", "--inc", NULL };
 static const char *brdowncmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/brightness.sh", "--dec", NULL };
+static const char *volupcmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/volume.sh", "--inc", NULL };
+static const char *voldowncmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/volume.sh", "--dec", NULL };
+static const char *volmutecmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/volume.sh", "--mute", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -84,6 +87,9 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_space,  spawn,          {.v = languagecmd } },
     { MODKEY|Mod1Mask,              XK_i,      spawn,          {.v = brupcmd} },
     { MODKEY|Mod1Mask,              XK_d,      spawn,          {.v = brdowncmd} },
+    { MODKEY|ShiftMask,             XK_i,      spawn,          {.v = volupcmd} },
+    { MODKEY|ShiftMask,             XK_d,      spawn,          {.v = voldowncmd} },
+    { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = volmutecmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
