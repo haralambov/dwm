@@ -80,10 +80,12 @@ static const char *volupcmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/volu
 static const char *voldowncmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/volume.sh", "--dec", NULL };
 static const char *volmutecmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/volume.sh", "--mute", NULL };
 static const char *lockercmd[] = { "/usr/local/bin/locker", NULL };
+static const char *browsercmd[] = { "/usr/bin/firefox", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_x,      spawn,          {.v = lockercmd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|Mod1Mask,              XK_space,  spawn,          {.v = languagecmd } },
