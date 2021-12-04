@@ -82,9 +82,15 @@ static const char *voldowncmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/vo
 static const char *volmutecmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/volume.sh", "--mute", NULL };
 static const char *lockercmd[] = { "/usr/local/bin/locker", NULL };
 static const char *browsercmd[] = { "/usr/bin/firefox", NULL };
+static const char *fullscreenshotcmd[] = { "/usr/bin/scrot", NULL };
+static const char *selectscreenshotcmd[] = { "/usr/bin/scrot", "--select", NULL };
+static const char *windowscreenshotcmd[] = { "/usr/bin/scrot", "--focused", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,                            XK_Print,  spawn,          {.v = fullscreenshotcmd } },
+	{ MODKEY,                       XK_Print,  spawn,          {.v = windowscreenshotcmd } },
+	{ MODKEY|ShiftMask,             XK_Print,  spawn,          {.v = selectscreenshotcmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = lockercmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
