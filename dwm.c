@@ -1628,6 +1628,8 @@ runAutostart(void) {
     system("killall -q xautolock; xautolock -time 5 -corners 00-- -locker slock &");
     system("killall -q redshift; redshift -P -O 3500 &");
     system("killall -q dunst; dunst &");
+    system("killall -q clipnotify; clipnotify &");
+    system("killall -q clipmenud; clipmenud &");
 }
 
 void
