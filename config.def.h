@@ -73,6 +73,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-h", "29", "-c", "-l", "10", "-bw", "3", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *clipmenucmd[] = { "clipmenu", "-h", "29", "-c", "-l", "10", "-bw", "3", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *languagecmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/language.sh", NULL };
 static const char *brupcmd[] = { "/home/zlatomir/Projects/dotfiles/scripts/brightness.sh", "--inc", NULL };
@@ -91,6 +92,7 @@ static Key keys[] = {
 	{ 0,                            XK_Print,  spawn,          {.v = fullscreenshotcmd } },
 	{ MODKEY,                       XK_Print,  spawn,          {.v = windowscreenshotcmd } },
 	{ MODKEY|ShiftMask,             XK_Print,  spawn,          {.v = selectscreenshotcmd } },
+	{ MODKEY,                       XK_v,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = lockercmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
