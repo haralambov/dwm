@@ -1626,10 +1626,10 @@ runAutostart(void) {
     system("killall -q nm-applet; nm-applet &");
     system("killall -q compton; compton --config ~/.config/compton.conf &");
     system("killall -q xautolock; xautolock -time 5 -corners 00-- -locker slock &");
-    system("killall -q redshift; redshift -P -O 3500 &");
     system("killall -q dunst; dunst &");
     system("killall -q clipnotify; clipnotify &");
     system("killall -q clipmenud; clipmenud &");
+    system("killall -q solaar; solaar --window=hide &");
 }
 
 void
