@@ -943,6 +943,8 @@ drawbar(Monitor *m)
 
 	if(showsystray && m == systraytomon(m) && !systrayonleft)
 		stw = getsystraywidth();
+	if (!m->showbar)
+		return;
 
 	/* draw status first so it can be overdrawn by tags later */
 	if (m == selmon) { /* status is only drawn on selected monitor */
