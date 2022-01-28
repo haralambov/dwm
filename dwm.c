@@ -1763,7 +1763,6 @@ runAutostart(void) {
     system("killall -q dunst; dunst &");
     system("killall -q clipnotify; clipnotify &");
     system("killall -q clipmenud; clipmenud &");
-    system("killall -q solaar; solaar --window=hide &");
 }
 
 void
