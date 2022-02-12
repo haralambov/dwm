@@ -44,13 +44,17 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class         instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Firefox",     NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "qBittorrent", NULL,     NULL,           1 << 6,    0,          0,          -1,        -1 },
-	{ "mpv",         NULL,     NULL,           1 << 5,    0,          0,          -1,        -1 },
-	{ "St",          NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ "feh",         NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ NULL,          NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	/* class         instance  title                  tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "Firefox",     NULL,     NULL,                  1 << 8,    0,          0,          -1,        -1 },
+	{ "qBittorrent", NULL,     NULL,                  1 << 6,    0,          0,          -1,        -1 },
+	{ "mpv",         NULL,     NULL,                  1 << 5,    0,          0,          -1,        -1 },
+	{ "St",          NULL,     NULL,                  0,         0,          1,           0,        -1 },
+	{ "feh",         NULL,     NULL,                  0,         1,          0,           0,        -1 },
+	{ NULL,          NULL,     "Event Tester",        0,         0,          0,           1,        -1 }, /* xev */
+	{ NULL,          NULL,     "Library",             0,         1,          0,           1,        -1 }, /* Firefox library */
+	{ NULL,          NULL,     "Picture-in-Picture",  0,         1,          0,           1,        -1 }, /* Firefox picture-in-picture */
+	{ NULL,          NULL,     "Bluetooth Devices",   0,         1,          0,           1,        -1 }, /* Bluetooth applet devices window */
+	{ NULL,          NULL,     "Solaar",              0,         1,          0,           1,        -1 }, /* Solaar window */
 };
 
 /* layout(s) */
