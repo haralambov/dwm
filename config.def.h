@@ -106,6 +106,7 @@ static const char *fullscreenshotcmd[] = { "/usr/bin/scrot", NULL };
 static const char *selectscreenshotcmd[] = { "/usr/bin/scrot", "--select", NULL };
 static const char *windowscreenshotcmd[] = { "/usr/bin/scrot", "--focused", NULL };
 static const char *filemanagercmd[] = { "st", "-e", "nnn", NULL };
+static const char *spotifycmd[] = { "spotify", "--no-zygote", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -115,6 +116,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_v,      spawn,          {.v = clipmenucmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = lockercmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = spotifycmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = passmenucmd } },
